@@ -1,3 +1,9 @@
+/**
+* Ce composant représente le formulaire d'inscription.
+* @function App
+* @returns {JSX.Element} Le formulaire d'inscription
+*/
+
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
@@ -44,12 +50,14 @@ function App() {
     }
   };
 
+  // Validation des champs ici
   useEffect(() => { 
     const v = validateForm(formData);
     setIsFormValid(v.formIsValid);
     setErrors(v.newErrors);
   }, [formData]);
 
+  // Affichage du formulaire
   return (
     <div>
       <form data-testid="form" onSubmit={handleSubmit}>

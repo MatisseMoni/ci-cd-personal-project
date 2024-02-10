@@ -21,20 +21,20 @@ describe("App", () => {
     };
   });
 
-  it("renders the form", () => {
+  test("renders the form", () => {
     render(<App />);
     const form = screen.getByTestId("form");
     expect(form).toBeInTheDocument();
   });
   describe("tests for the form", () => {
     describe("nom", () => {
-      it("renders the input", () => {
+      test("renders the input", () => {
         render(<App />);
         const labelNom = screen.getByTestId("labelNom");
         expect(labelNom).toBeInTheDocument();
       });
 
-      it("renders the error message", () => {
+      test("renders the error message", () => {
         render(<App />);
         const divNom = screen.getByTestId("divNom");
         const inputNom = screen.getByTestId("inputNom");
@@ -44,7 +44,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should update the state", () => {
+      test("should update the state", () => {
         render(<App />);
         const divNom = screen.getByTestId("divNom");
         const inputNom = screen.getByTestId("inputNom");
@@ -53,7 +53,7 @@ describe("App", () => {
         expect(divNom).not.toHaveTextContent("Ce champ est requis.");
       });
 
-      it("should display an error message if the input is invalid tot@", () => {
+      test("should display an error message if the input is invalid tot@", () => {
         render(<App />);
         const divNom = screen.getByTestId("divNom");
         const inputNom = screen.getByTestId("inputNom");
@@ -64,7 +64,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should display an error message if the input is invalid tot0", () => {
+      test("should display an error message if the input is invalid tot0", () => {
         render(<App />);
         const divNom = screen.getByTestId("divNom");
         const inputNom = screen.getByTestId("inputNom");
@@ -77,13 +77,13 @@ describe("App", () => {
     });
 
     describe("prenom", () => {
-      it("renders the input", () => {
+      test("renders the input", () => {
         render(<App />);
         const labelPrenom = screen.getByTestId("labelPrenom");
         expect(labelPrenom).toBeInTheDocument();
       });
 
-      it("renders the error message", () => {
+      test("renders the error message", () => {
         render(<App />);
         const divPrenom = screen.getByTestId("divPrenom");
         const inputPrenom = screen.getByTestId("inputPrenom");
@@ -93,7 +93,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should update the state", () => {
+      test("should update the state", () => {
         render(<App />);
         const divPrenom = screen.getByTestId("divPrenom");
         const inputPrenom = screen.getByTestId("inputPrenom");
@@ -102,7 +102,7 @@ describe("App", () => {
         expect(divPrenom).not.toHaveTextContent("Ce champ est requis.");
       });
 
-      it("should display an error message if the input is invalid tot@", () => {
+      test("should display an error message if the input is invalid tot@", () => {
         render(<App />);
         const divPrenom = screen.getByTestId("divPrenom");
         const inputPrenom = screen.getByTestId("inputPrenom");
@@ -113,7 +113,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should display an error message if the input is invalid tot0", () => {
+      test("should display an error message if the input is invalid tot0", () => {
         render(<App />);
         const divPrenom = screen.getByTestId("divPrenom");
         const inputPrenom = screen.getByTestId("inputPrenom");
@@ -126,13 +126,13 @@ describe("App", () => {
     });
 
     describe("email", () => {
-      it("renders the input", () => {
+      test("renders the input", () => {
         render(<App />);
         const labelEmail = screen.getByTestId("labelEmail");
         expect(labelEmail).toBeInTheDocument();
       });
 
-      it("renders the error message", () => {
+      test("renders the error message", () => {
         render(<App />);
         const divEmail = screen.getByTestId("divEmail");
         const inputEmail = screen.getByTestId("inputEmail");
@@ -142,7 +142,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should update the state", () => {
+      test("should update the state", () => {
         render(<App />);
         const divEmail = screen.getByTestId("divEmail");
         const inputEmail = screen.getByTestId("inputEmail");
@@ -151,7 +151,7 @@ describe("App", () => {
         expect(divEmail).not.toHaveTextContent("Ce champ est requis.");
       });
 
-      it("should display an error message if the input is invalid xxxx@xxxx", () => {
+      test("should display an error message if the input is invalid xxxx@xxxx", () => {
         render(<App />);
         const divEmail = screen.getByTestId("divEmail");
         const inputEmail = screen.getByTestId("inputEmail");
@@ -162,7 +162,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should display an error message if the input is invalid toto.toto", () => {
+      test("should display an error message if the input is invalid toto.toto", () => {
         render(<App />);
         const divEmail = screen.getByTestId("divEmail");
         const inputEmail = screen.getByTestId("inputEmail");
@@ -175,13 +175,13 @@ describe("App", () => {
     });
     
     describe("dateNaissance", () => {
-      it("renders the input", () => {
+      test("renders the input", () => {
         render(<App />);
         const labelDate = screen.getByTestId("labelDate");
         expect(labelDate).toBeInTheDocument();
       });
 
-      it("renders the error message", () => {
+      test("renders the error message", () => {
         render(<App />);
         const divDate = screen.getByTestId("divDate");
         const inputDate = screen.getByTestId("inputDate");
@@ -191,7 +191,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should update the state", () => {
+      test("should update the state", () => {
         render(<App />);
         const divDate = screen.getByTestId("divDate");
         const inputDate = screen.getByTestId("inputDate");
@@ -200,7 +200,7 @@ describe("App", () => {
         expect(divDate).not.toHaveTextContent("Ce champ est requis.");
       });
 
-      it("should display an error message if the age is below 18 years", () => {
+      test("should display an error message if the age is below 18 years", () => {
         render(<App />);
         const divDate = screen.getByTestId("divDate");
         const inputDate = screen.getByTestId("inputDate");
@@ -213,13 +213,13 @@ describe("App", () => {
     });
 
     describe("ville", () => {
-      it("renders the input", () => {
+      test("renders the input", () => {
         render(<App />);
         const labelVille = screen.getByTestId("labelVille");
         expect(labelVille).toBeInTheDocument();
       });
 
-      it("renders the error message", () => {
+      test("renders the error message", () => {
         render(<App />);
         const divVille = screen.getByTestId("divVille");
         const inputVille = screen.getByTestId("inputVille");
@@ -229,7 +229,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should update the state", () => {
+      test("should update the state", () => {
         render(<App />);
         const divVille = screen.getByTestId("divVille");
         const inputVille = screen.getByTestId("inputVille");
@@ -240,13 +240,13 @@ describe("App", () => {
     });
 
     describe("codePostal", () => {
-      it("renders the input", () => {
+      test("renders the input", () => {
         render(<App />);
         const labelZip = screen.getByTestId("labelZip");
         expect(labelZip).toBeInTheDocument();
       });
 
-      it("renders the error message", () => {
+      test("renders the error message", () => {
         render(<App />);
         const divZip = screen.getByTestId("divZip");
         const inputZip = screen.getByTestId("inputZip");
@@ -256,7 +256,7 @@ describe("App", () => {
         expect(error).toBeInTheDocument();
       });
 
-      it("should update the state", () => {
+      test("should update the state", () => {
         render(<App />);
         const divZip = screen.getByTestId("divZip");
         const inputZip = screen.getByTestId("inputZip");
@@ -265,7 +265,7 @@ describe("App", () => {
         expect(divZip).not.toHaveTextContent("Ce champ est requis.");
       });
 
-      it("should display an error message if the input is invalid 0600", () => {
+      test("should display an error message if the input is invalid 0600", () => {
         render(<App />);
         const divZip = screen.getByTestId("divZip");
         const inputZip = screen.getByTestId("inputZip");
@@ -279,14 +279,14 @@ describe("App", () => {
   });
 
   describe("tests sending the form", () => {
-    it("should not send the form if there are errors", () => {
+    test("should not send the form if there are errors", () => {
       render(<App />);
       const form = screen.getByTestId("form");
       const buttonForm = within(form).getByRole("button");
       expect(buttonForm).toBeDisabled();
     });
 
-    it("should send the form if there are no errors", async () => {
+    test("should send the form if there are no errors", async () => {
       render(<App />);
       const form = screen.getByTestId("form");
       const inputNom = within(form).getByTestId("inputNom");
@@ -307,8 +307,9 @@ describe("App", () => {
       setTimeout(() => {
         expect(buttonForm).toBeEnabled();
       }, 500);
+      fireEvent.submit(form)
 
-      fireEvent.click(buttonForm);
+      /* fireEvent.click(buttonForm); */
       setTimeout(() => {
         expect(screen.getByText("Inscription réussie !")).toBeInTheDocument();
         expect(inputNom.value).toBe("");

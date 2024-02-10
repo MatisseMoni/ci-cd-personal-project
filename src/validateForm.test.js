@@ -1,4 +1,5 @@
 import validateForm, { getAge } from './validateForm';
+import "@testing-library/jest-dom";
 
 describe('validateForm', () => {
     let formData;
